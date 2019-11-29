@@ -1,6 +1,7 @@
 # Guía de laboratorio Parte 4
 Guía del laboratorio impartido por sidertia en las jornadas CCN-STIC
 
+Tiempo estimado: **10 min**
 Se ejecutará un exploit desarrollado por Nick Frichette el cual aprovecha una vulnerabilidad descubierta en febrero de 2019 identificada como CVE-2019-5736.
 ***
 ## ÍNDICE 📋
@@ -11,7 +12,7 @@ Se ejecutará un exploit desarrollado por Nick Frichette el cual aprovecha una v
 
 1. cambiar a directorio Parte4
 ````
-cd ~/contenedoresyseguridad/Parte4
+cd ~/contenedoresyseguridad/Seccion4DockerEscape
 ````
 2. Backup runc
 ````
@@ -20,7 +21,7 @@ sudo cp /usr/sbin/runc /usr/sbin/runc.backup
 
 
 <div id='id1'></div>
-###1 CVE-2019-5736
+##1 CVE-2019-5736
 
 Si se desea más información se puede consultar una explicación detallada del funcionamiento en el siguiente repositorio:
 
@@ -38,11 +39,13 @@ En nuestro caso, vamos a ejecutar el exploit en nuestra instalación docker por 
 Ya estamos listos para escapar de un contenedor sobreescribiendo runC y ejecutando nuestro payload como root.
 
 <div id='id12'></div>
-### Ejecución
+## Ejecución
 
 1. **En el Host**. Para simular a un atacante, ejecutaremos una shell y mapearemos el exploit compilado en un contenedor de base ubuntu en la carpeta tmp. 
 ````
-docker run --name contcomprometido -v /home/administrator/CVE-2019-5736-PoC/main:/tmp/main -it ubuntu /bin/bash --
+sudo chmod 777 /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main
+
+docker run --name contcomprometido -v /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main:/tmp/main -it ubuntu /bin/bash
 ````
 2. **En la shell del contenedor comprometido** recién creado cambiar de directorio a tmp y ejecutar el exploit.
 ````

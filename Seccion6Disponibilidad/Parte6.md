@@ -1,5 +1,6 @@
 # Guía de laboratorio Parte 6
 Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
+Tiempo estimado: **5 min**
 ***
 ## ÍNDICE 📋
 1. [Disponibilidad](#id1)
@@ -31,3 +32,5 @@ adminis+ 26523  0.0  0.0  12112  1088 pts/1    S+   17:40   0:00 grep --color=au
 ````
 
 Terminamos el demonio con ctrl + C y volvemos a utilizar el comando ps aux|grep docker. Los dos procesos siguen apareciendo y la aplicación dotnet sigue siendo accesible desde el navegador.
+
+Si restauramos de nuevo el daemon, podemos controlar los contenedores de nuevo.

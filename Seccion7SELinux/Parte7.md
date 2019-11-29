@@ -1,4 +1,4 @@
-# Guía de laboratorio Parte 5
+# Guía de laboratorio Parte 7
 Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 ***
 ## ÍNDICE 📋
@@ -111,7 +111,7 @@ tee: /tmp/testselinux: Permission denied
 ```
 
 
-###Control de permisos SELinux en volúmenes
+##Control de permisos SELinux en volúmenes
 
 Es posible utilizar etiquetas de volumen para permitir acceso de un contenedor a un fichero o directorio mapeado. 
 Esto se realiza con las opciones z minúscula y Z mayúscula.

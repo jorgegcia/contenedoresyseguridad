@@ -1,12 +1,13 @@
 # Guía de laboratorio Parte 3
 Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 ***
+Tiempo estimado: **5 min**
 ## ÍNDICE 📋
 1. [docker-bench-security](#id1)
 
 ## Requisitos
 <div id='id1'></div>
-### 1 docker-bench-security
+## 1 docker-bench-security
 Repositorio oficial: https://github.com/docker/docker-bench-security.git
 
 Ejecutamos el benchmark:
