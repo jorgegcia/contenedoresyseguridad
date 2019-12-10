@@ -6,7 +6,9 @@ Tiempo estimado: **5 min**
 1. [docker-bench-security](#id1)
 
 ## Requisitos
+
 <div id='id1'></div>
+
 ## 1 docker-bench-security
 Repositorio oficial: https://github.com/docker/docker-bench-security.git
 
@@ -23,5 +25,4 @@ Si se desea saber más sobre todos y cada uno de los controles, es posible desca
 
 # Resumen
 
-
-Hemos utilizado la herramienta docker-bench-security para listar el cumplimiento de las configuraciones recomendadas por el CIS para docker.
+Se ha utilizado la herramienta docker-bench-security para listar el cumplimiento de las configuraciones recomendadas por el CIS para docker.
