@@ -27,7 +27,7 @@ Para probar cómo limitar los recursos de un contenedor, se utilizará el binari
 
 1. Cambiar a directorio cgroups
 ```
-cd ~/contenedoresyseguridad/Seccion2CGroups
+cd ~/contenedoresyseguridad/Seccion4CGroups
 ```
 2. Crear Dockerfile
 ```
