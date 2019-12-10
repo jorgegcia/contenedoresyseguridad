@@ -3,8 +3,10 @@ Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 ***
 ## ÍNDICE 📋
 1. [SELinux](#id1)
+2. [Control de permisos con SELinux en volúmenes](#id2)
 
 <div id='id1'></div>
+
 ## 1 SELinux
 
 Vemos si selinux está habilitado por defecto en docker:
@@ -110,8 +112,9 @@ tee: /tmp/testselinux: Permission denied
 ....
 ```
 
+<div id='2'></div>
 
-##Control de permisos SELinux en volúmenes
+## 2 Control de permisos SELinux en volúmenes
 
 Es posible utilizar etiquetas de volumen para permitir acceso de un contenedor a un fichero o directorio mapeado. 
 Esto se realiza con las opciones z minúscula y Z mayúscula.
