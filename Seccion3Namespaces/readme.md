@@ -52,16 +52,18 @@ En el directorio contenedores se encuentra el código de la aplicación dotnetco
 
 Además hay 3 scripts, cada uno de ellos levanta cada uno de los contenedores citados previamente.
 
-Para compilar la aplicación de dotnetcore se debe cambiar al directorio app, en el cual se encuentra el Dockerfile que construirá las imágenes necesarias para compilar la aplicación:
-````
-cd app
+Para compilar la aplicación de dotnetcore se debe cambiar al directorio app, en el cual se encuentra el Dockerfile que construirá las imágenes necesarias para compilar la aplicación.
+Ya está compilado el binario de dotnetcore, pero se vuelve a compilar para mostrar el proceso:
 
+````
+docker rm -f myapp
+cd ~/containers/app
 docker build -t app .
 ````
 
 Posteriormente se levanta el contenedor:
 ````
-./runDotnetapp.sh
+~containers/runDotnetapp.sh
 ````
 
 <div id='id3'></div>
