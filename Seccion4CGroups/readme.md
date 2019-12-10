@@ -5,7 +5,7 @@ Tiempo estimado: **10 min**
 ## ÍNDICE 📋
 1. [CGroups ](#id1)
 2. [Flags de limitación](#id2)
-3. [ulimits](#id3)
+3. [Ulimits](#id3)
 
 
 <div id='id1'></div>
@@ -78,7 +78,7 @@ Ejecutar forkbomb:
 
 <div id='id3'></div>
 
-## 3 ulimits
+## 3 Ulimits
 La configuración ulimits permite utilizar cgroups a nivel de daemon.
 añadir propiedad default-ulimit a daemon.json
 
