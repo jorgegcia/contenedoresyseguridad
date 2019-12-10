@@ -16,6 +16,7 @@ sudo cp /usr/sbin/runc.backup /usr/sbin/runc
 ````
 ## ÍNDICE 📋
 1. [User namespace mapping](#id1)
+2. [Comportamiento por defecto](#id2)
 
 <div id='id1'></div>
 
@@ -64,6 +65,7 @@ root@47c1156d2f2c:/home# cat shadow
 cat: shadow: Permission denied
 ````
 
+<div id='id2'></div>
 
 ## 2 Comportamiento por defecto
 
