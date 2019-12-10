@@ -11,16 +11,16 @@ Tiempo estimado: **5 min**
 
 Cada contenedor se gestiona por un proceso "shim", de modo que el estado de runc, docker y containerd es irrelevante para que el contenedor siga funcionando. Esto se consigue mediante el flag live-restore
 
-Ejecutamos el daemon con el flag live restore:
+Se ejecuta el daemon con el flag live restore:
 ````bash
 sudo dockerd --live-restore
 ````
-A continuación levantamos los contenedores nginx y myapp
+A continuación, se levantan los contenedores nginx y myapp
 ````
 docker start myapp && docker start nginx
 ````
 
-observamos que podemos acceder a la aplicación dotnet desde el navegador y podemos ver los dos procesos :
+Se puede observar que se accede a la aplicación dotnet desde el navegador y podemos ver los dos procesos :
 ````
 ps aux|grep docker
 
@@ -32,6 +32,6 @@ adminis+ 26523  0.0  0.0  12112  1088 pts/1    S+   17:40   0:00 grep --color=au
 
 ````
 
-Terminamos el demonio con ctrl + C y volvemos a utilizar el comando ps aux|grep docker. Los dos procesos siguen apareciendo y la aplicación dotnet sigue siendo accesible desde el navegador.
+Se para el daemon con ctrl + C y se vuelve a lanzar el comando ps aux|grep docker. Los dos procesos siguen apareciendo y la aplicación dotnet sigue siendo accesible desde el navegador.
 
-Si restauramos de nuevo el daemon, podemos controlar los contenedores de nuevo.
+Si se restaura de nuevo el daemon, y se recupera la capacidad de controlar los contenedores de nuevo.
