@@ -4,7 +4,8 @@ Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 Tiempo estimado: **10 min**
 ## ÍNDICE 📋
 1. [CGroups ](#id1)
-2. [Flags de limitación](#id31)
+2. [Flags de limitación](#id2)
+3. [ulimits](#id3)
 
 
 <div id='id1'></div>
@@ -56,6 +57,7 @@ docker stats -a
 ````
 docker rm -f estresa1
 ````
+<div id='id2'></div>
 
 ## 2 Flags de limitación
 
@@ -74,8 +76,9 @@ Ejecutar forkbomb:
 :(){ :|: & };:
 ````
 
-<div id='id31'></div>
-##3.1 ulimits
+<div id='id3'></div>
+
+## 3 ulimits
 La configuración ulimits permite utilizar cgroups a nivel de daemon.
 añadir propiedad default-ulimit a daemon.json
 
