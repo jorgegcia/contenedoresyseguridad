@@ -9,7 +9,7 @@ Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 
 ## 1 SELinux
 
-Vemos si selinux está habilitado por defecto en docker:
+Se comprueba si selinux está habilitado por defecto en docker:
 ````
 docker info
 ....
@@ -44,15 +44,15 @@ system_u:object_r:container_var_lib_t:s0
 ````
 **Usuario:rol:tipo:Rango**
 
-Lanzamos dockerd con la opción selinux habilitada:
+Se lanza dockerd con la opción selinux habilitada:
 ````
 sudo dockerd --selinux-enabled=true
 ````
 
 Por defecto, selinux permite a un contenedor docker leer de los directorios /etc y /usr pero no escribir.
-Vamos a comprobarlo:
+Para comprobar este punto:
 
-Creamos un fichero con contenido en el directorio /etc y listamos sus etiquetas selinux:
+Se crea un archivo con contenido en el directorio /etc y se listan sus etiquetas selinux:
 ````
 echo "primer test selinux" | sudo tee /etc/testselinux
 ls -lZ /etc/testselinux
@@ -63,7 +63,7 @@ ls -lZ /etc/testselinux
 ....
 ````
 
-Comprobamos si podemos leer y escribir en este fichero desde un contenedor:
+Se comprueba si es posible leer y escribir en este fichero desde un contenedor:
 ````
 [administrator@localhost ~]$
 docker run -ti -v /etc/testselinux:/tmp/testselinux ubuntu bash
@@ -92,7 +92,7 @@ system_u:system_r:container_t:s0:c360,c461 root 1 0.0  0.0 18508 3408 pts/0    S
 
 ````
 
-Podemos observar que en otro directorio no permite leer ni escribir, por ejemplo /home:
+Se puede observar que en otro directorio no permite leer ni escribir, por ejemplo /home:
 ```
 [administrator@localhost ~]$
 docker run -ti -v /home/testselinux:/tmp/testselinux ubuntu bash
@@ -116,7 +116,7 @@ tee: /tmp/testselinux: Permission denied
 
 ## 2 Control de permisos SELinux en volúmenes
 
-Es posible utilizar etiquetas de volumen para permitir acceso de un contenedor a un fichero o directorio mapeado. 
+Es posible utilizar etiquetas de volumen para permitir acceso de un contenedor a un archivo o directorio mapeado. 
 Esto se realiza con las opciones z minúscula y Z mayúscula.
 
 z minúscula  hace un fichero accesible a todos los contenedores de tipo container_t.
