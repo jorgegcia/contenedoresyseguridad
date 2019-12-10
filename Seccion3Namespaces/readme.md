@@ -56,9 +56,9 @@ El entorno de pruebas se compone de tres elementos:
 
 En el directorio contenedores se encuentra el código de la aplicación dotnetcore y la configuración de nginx.
 
-Además hay 3 scripts, cada uno de ellos levanta cada uno de los puntos comentados previamente.
+Además hay 3 scripts, cada uno de ellos levanta cada uno de los contenedores citados previamente.
 
-Para compilar la aplicación de dotnetcore cambiamos al directorio app, en el cual se encuentra el Dockerfile que construirá las imágenes necesarias para compilar la aplicación:
+Para compilar la aplicación de dotnetcore se debe cambiar al directorio app, en el cual se encuentra el Dockerfile que construirá las imágenes necesarias para compilar la aplicación:
 ````
 cd app
 
@@ -78,9 +78,9 @@ Se deja de compartir el espacio de nombres. Fork crea un proceso hijo antes de l
 ```
 sudo unshare --fork --pid --mount-proc bash
 ```
-En la nueva bash ejecutar
+En la nueva bash se debe ejecutar
 ```
 ps aux
 ```
-Observar que en la salida solo aparecen 2 procesos, el propio de ps y la bash como PID 1.
-Observar desde fuera del docker el proceso.
+Se puede observar que en la salida solo aparecen 2 procesos, el propio de ps y la bash como PID 1.
+Se puede observar desde fuera del docker el proceso ejecutándose.
