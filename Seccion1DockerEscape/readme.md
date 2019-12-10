@@ -23,7 +23,7 @@ sudo cp /usr/sbin/runc /usr/sbin/runc.backup
 
 <div id='id1'></div>
 
-## CVE-2019-5736
+## 1 CVE-2019-5736
 
 Si se desea más información se puede consultar una explicación detallada del funcionamiento en el siguiente repositorio:
 
@@ -42,7 +42,7 @@ Ya estamos listos para escapar de un contenedor sobreescribiendo runC y ejecutan
 
 <div id='id12'></div>
 
-## Ejecución
+## 2 Ejecución
 
 1. **En el Host**. Para simular a un atacante, ejecutaremos una shell y mapearemos el exploit compilado en un contenedor de base ubuntu en la carpeta tmp. 
 ````
