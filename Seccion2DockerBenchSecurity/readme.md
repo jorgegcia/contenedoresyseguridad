@@ -9,7 +9,7 @@ Tiempo estimado: **5 min**
 
 <div id='id1'></div>
 
-## 1 docker-bench-security
+## docker-bench-security
 Repositorio oficial: https://github.com/docker/docker-bench-security.git
 
 Ejecutamos el benchmark:
