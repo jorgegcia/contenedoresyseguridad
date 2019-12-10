@@ -6,7 +6,8 @@ Tiempo estimado: **5 min**
 1. [Disponibilidad](#id1)
 
 <div id='id1'></div>
-## 1 Disponibilidad
+
+## Disponibilidad
 
 Cada contenedor se gestiona por un proceso "shim", de modo que el estado de runc, docker y containerd es irrelevante para que el contenedor siga funcionando. Esto se consigue mediante el flag live-restore
 
