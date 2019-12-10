@@ -1,7 +1,7 @@
 ## /etc/config/daemon.json
 
 
-En este punto queremos aplicar todas las configuraciones seguras posibles. 
+En este punto se procederá a aplicar todas las configuraciones seguras posibles. 
 Para ello crearemos el fichero **/etc/docker/daemon.json** en el cual añadiremos las opciones vistas hasta ahora en formato JSON:
 
 ```json
