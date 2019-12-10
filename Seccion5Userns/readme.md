@@ -4,6 +4,7 @@ Tiempo estimado: **10 min**
 ***
 
 ## Requisitos
+
 -Parar el servicio de docker:
 ````
 sudo systemctl stop docker
@@ -17,6 +18,7 @@ sudo cp /usr/sbin/runc.backup /usr/sbin/runc
 1. [User namespace mapping](#id1)
 
 <div id='id1'></div>
+
 ## 1 User namespace mapping
 
 Directorio de docker:
@@ -63,7 +65,7 @@ cat: shadow: Permission denied
 ````
 
 
-## Comportamiento por defecto
+## 2 Comportamiento por defecto
 
 Parar dockerd con ctrl+c.
 arrancarlo sin parametros:
