@@ -7,7 +7,7 @@ Se ejecutará un exploit desarrollado por Nick Frichette el cual aprovecha una v
 ***
 ## ÍNDICE 📋
 1. [CVE-2019-5736](#id1)
-    1. [Ejecución ](#id12)
+2. [Ejecución](#id12)
 
 ## Requisitos
 
