@@ -17,7 +17,8 @@ git clone https://github.com/SidertiaLabs/contenedoresyseguridad.git
 ````
 
 <div id='id1'></div>
-##1 Comandos básicos de docker
+
+## 1 Comandos básicos de docker
 
 Lista todos los contenedores
 ````
@@ -45,7 +46,8 @@ docker inspect "nombre contenedor"
 ````
 
 <div id='id2'></div>
-##2 Entorno
+
+## 2 Entorno
 
 El entorno de pruebas se compone de tres elementos:
 1. Contenedor nginx que actúa como proxy inverso.
@@ -63,15 +65,16 @@ cd app
 docker build -t app .
 ````
 
-Posteriormente levantamos el contenedor:
+Posteriormente se levanta el contenedor:
 ````
 ./runDotnetapp.sh
 ````
 
 <div id='id3'></div>
-##3 Namespaces
 
-Deja de compartir el espacio de nombres. Fork crea un proceso hijo antes de lanzar bash
+## 3 Namespaces
+
+Se deja de compartir el espacio de nombres. Fork crea un proceso hijo antes de lanzar bash
 ```
 sudo unshare --fork --pid --mount-proc bash
 ```
@@ -80,4 +83,4 @@ En la nueva bash ejecutar
 ps aux
 ```
 Observar que en la salida solo aparecen 2 procesos, el propio de ps y la bash como PID 1.
-Observar desde fuera el proceso.
+Observar desde fuera del docker el proceso.
