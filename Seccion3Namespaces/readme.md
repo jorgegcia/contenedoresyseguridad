@@ -8,13 +8,7 @@ Tiempo estimado: **10 min**
 2. [Entorno](#id2)
 3. [Namespaces ](#id3)
 
-## Requisitos
 
--Descargar la máquina virtual que servirá de host de docker e importar en virtualbox.
--Descargar repositorio del laboratorio 
-````
-git clone https://github.com/SidertiaLabs/contenedoresyseguridad.git
-````
 
 <div id='id1'></div>
 
