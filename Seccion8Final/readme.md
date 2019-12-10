@@ -40,7 +40,7 @@ Con todas las configuraciones vistas hasta ahora aplicadas, se procedera a trata
 Se observar un error al ejecutar la imagen de ubuntu:
 
 ````
-[administrator@localhost Seccion4DockerEscape]$ docker run --name contcomprometido -v -it ubuntu /bin/bash
+[administrator@localhost Seccion4DockerEscape]$ docker run --name contcomprometido -it ubuntu /bin/bash
 Unable to find image 'ubuntu:latest' locally
 latest: Pulling from library/ubuntu
 7ddbc47eeb70: Pull complete
