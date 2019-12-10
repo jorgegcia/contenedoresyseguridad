@@ -2,6 +2,7 @@
 Guía del laboratorio impartido por sidertia en las jornadas CCN-STIC
 
 Tiempo estimado: **10 min**
+
 Se ejecutará un exploit desarrollado por Nick Frichette el cual aprovecha una vulnerabilidad descubierta en febrero de 2019 identificada como CVE-2019-5736.
 ***
 ## ÍNDICE 📋
@@ -21,7 +22,8 @@ sudo cp /usr/sbin/runc /usr/sbin/runc.backup
 
 
 <div id='id1'></div>
-## 1 CVE-2019-5736
+
+## CVE-2019-5736
 
 Si se desea más información se puede consultar una explicación detallada del funcionamiento en el siguiente repositorio:
 
