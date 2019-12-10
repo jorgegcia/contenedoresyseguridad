@@ -54,8 +54,8 @@ Usuario:(uid en el host):(rango)
 
 Como ejemplo, en este caso dockremap tendrá UID 0 en el contenedor y UID 165536 en el host. 
 
-Vamos a comprobar que un usuario root en un contenedor no tiene acceso root fuera de este:
-Ejecutamos un contenedor de prueba que tenga mapeado el fichero shadow perteneciente a root:
+A continuación, se va a comprobar que un usuario root en un contenedor no tiene acceso root fuera de este:
+SE ejecutará un contenedor de prueba que tenga mapeado el fichero shadow perteneciente a root:
 ````
 docker run -it -v /etc/shadow:/tmp/shadow ubuntu /bin/bash
 ````
@@ -70,7 +70,7 @@ cat: shadow: Permission denied
 ## 2 Comportamiento por defecto
 
 Parar dockerd con ctrl+c.
-arrancarlo sin parametros:
+ arrancar dicho contenedor sin parametros:
 ````
 sudo dockerd
 ````
