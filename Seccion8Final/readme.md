@@ -27,7 +27,7 @@ Para ello crearemos el fichero **/etc/docker/daemon.json** en el cual añadiremo
 }
 ```
 
-Una vez aplicadas estas configuraciones, reiniciamos el servicio docker:
+Una vez aplicadas estas configuraciones, se reinicia el servicio docker:
 ````
 sudo systemctl restart docker
 ````
@@ -35,9 +35,9 @@ sudo systemctl restart docker
 Las imágenes y y contenedores previos ya no existen en este espacio de usuarios, ya que se crea una nueva carpeta en /var/lib/docker/"uid"."gid" .
 En este directorio se almacenan todos los archivos de docker. Contenedores, imágenes, volúmenes, etc.
 
-Con todas las configuraciones vistas hasta ahora aplicadas, procederemos a tratar de ejecutar el mismo CVE que mostramos en la parte 1 de este taller .
+Con todas las configuraciones vistas hasta ahora aplicadas, se procedera a tratar de ejecutar el mismo CVE que mostramos en la parte 1 de este taller .
 
-Vemos que tenemos un error al ejecutar la imagen de ubuntu:
+Se observar un error al ejecutar la imagen de ubuntu:
 
 ````
 [administrator@localhost Seccion4DockerEscape]$ docker run --name contcomprometido -v /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main:/tmp/main -it ubuntu /bin/bash
@@ -56,7 +56,7 @@ Esto se debe a que las etiquetas de las políticas selinux incluidas en el paque
 
 Véase UDICA: https://github.com/containers/udica
 
-En nuestro caso para solventar este error, mapearemos directamente el directorio /dev/mqueue para que las etiquetas selinux se apliquen correctamente:
+En nuestro caso para solventar este error, se mapeará directamente el directorio /dev/mqueue para que las etiquetas selinux se apliquen correctamente:
 
 ````
 docker run --name contcomprometido -v /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main:/tmp/main -v /dev/mqueue:/dev/mqueue -it ubuntu /bin/bash
