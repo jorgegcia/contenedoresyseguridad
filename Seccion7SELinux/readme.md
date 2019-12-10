@@ -3,7 +3,7 @@ Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 ***
 ## ÍNDICE 📋
 1. [SELinux](#id1)
-2. [Control de permisos con SELinux en volúmenes](#id2)
+2. [Control de permisos SELinux en volúmenes](#id2)
 
 <div id='id1'></div>
 
