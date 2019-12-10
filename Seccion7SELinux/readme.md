@@ -122,11 +122,11 @@ Esto se realiza con las opciones z minúscula y Z mayúscula.
 z minúscula  hace un fichero accesible a todos los contenedores de tipo container_t.
 
 ````
-docker run -ti -v /home/testselinux:/tmp/testselinux:z ubuntu bash
+docker run -ti -v /etc/testselinux:/tmp/testselinux:z ubuntu bash
 ````
 
 Z mayúscula hace un fichero accesible únicamente a un contenedor
 
 ````
-docker run -ti -v /home/testselinux:/tmp/testselinux:Z ubuntu bash
+docker run -ti -v /etc/testselinux:/tmp/testselinux:Z ubuntu bash
 ````
