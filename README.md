@@ -1,2 +1,2 @@
 # contenedoresyseguridad
-Prácticas sobre eltaller de contenedoresyseguridad
+Prácticas sobre el taller de contenedores y seguridad en docker
