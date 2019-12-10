@@ -13,7 +13,7 @@ Tiempo estimado: **10 min**
 ## 1 CGroups
 
 Se puede limitar los recursos a nivel de daemon o a nivel de cada contenedor.
-Para un contenedor docker run tiene varios flags:
+Para un contenedor docker run existen varios flags:
 
 ```
 --cpu-shares            de 0-1024, limita la porción máxima de CPU de un contenedor
@@ -23,7 +23,7 @@ Para un contenedor docker run tiene varios flags:
 --pids-limit            limite de process ids
 ```
 
-Para probar cómo limitar los recursos de un contenedor, utilizaremos el binario stress sobre una imagen de ubuntu. Esto es, un contenedor que realiza raíces cuadradas continuamente, lo que causa un alto uso de recursos.
+Para probar cómo limitar los recursos de un contenedor, se utilizará el binario stress sobre una imagen de ubuntu. Más concretamente, se basa en un contenedor que realiza raíces cuadradas continuamente, lo que causa un alto uso de recursos.
 
 1. Cambiar a directorio cgroups
 ```
@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y stress
 
 CMD stress -c 2
 ```
-3. Vemos que podemos limitar recursos también en la etapa de build.
+3. Se pueden limitar recursos también en la etapa de build. Se pueden observar las distintas opciones de la construcción de un contenedor utilizando el parámetro -h
 ````
 docker build -h
 ````
@@ -45,11 +45,11 @@ Build
 ````
 docker build -t estresacpu . 
 ````
-4. Ejecutar contenedor basado en la imagen que hemos construido
+4. Ejecutar contenedor basado en la imagen construida previamente
 ````
 docker run -d --name estresa1 estresacpu
 ````
-5. Observar la carga sobre las 2 cpus con htop al 100%
+5. Se puede observar la carga sobre las 2 cpus con htop al 100%
 ````
 docker stats -a
 ````
@@ -61,11 +61,11 @@ docker rm -f estresa1
 
 ## 2 Flags de limitación
 
-Ejecutar de nuevo el contenedor con los flags comentados al inicio:
+Ejecutar de nuevo el contenedor con los flags comentados previamente:
 ````
 docker run -d --name estresa1 --cpuset-cpus 0 --cpu-shares 512 --pids-limit 100 estresacpu 
 ````
-Observamos que solo se utiliza el 50% de la cpu 0
+Se observa que solamente se utiliza el 50% de la cpu 0
 
 ````
 docker exec -it estresa1 /bin/bash
@@ -79,10 +79,11 @@ Ejecutar forkbomb:
 <div id='id3'></div>
 
 ## 3 Ulimits
+
 La configuración ulimits permite utilizar cgroups a nivel de daemon.
 añadir propiedad default-ulimit a daemon.json
 
-Observar el resultado.
+Se puede observar el resultado, no permitiendo ejecutar más procesos dentro del contenedor.
 
 # Resumen
-Hemos visto el uso de namespaces y cgroups y cómo utilizarlos en linux. En las siguientes partes veremos selinux y user namespaces.
+Se havisto el uso de namespaces y cgroups y cómo utilizarlos en linux.
