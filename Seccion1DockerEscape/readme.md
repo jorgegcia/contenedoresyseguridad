@@ -62,3 +62,8 @@ docker exec -it contcomprometido /bin/sh
 ````
 4. Se puede observar que en la **shell de contcomprometido** obtiene la salida overwritten succesfully.
 **En el host** se puede visualizar el fichero /tmp/ShadowOwnedBySidertia , el cual es una copia del fichero de contraseñas shadow del host.
+
+Se debe restaurar el binario runc:
+````
+sudo cp /usr/sbin/runc.backup /usr/sbin/runc
+````
