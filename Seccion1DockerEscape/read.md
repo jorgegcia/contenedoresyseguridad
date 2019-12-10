@@ -41,6 +41,7 @@ En nuestro caso, vamos a ejecutar el exploit en nuestra instalación docker por 
 Ya estamos listos para escapar de un contenedor sobreescribiendo runC y ejecutando nuestro payload como root.
 
 <div id='id12'></div>
+
 ## Ejecución
 
 1. **En el Host**. Para simular a un atacante, ejecutaremos una shell y mapearemos el exploit compilado en un contenedor de base ubuntu en la carpeta tmp. 
