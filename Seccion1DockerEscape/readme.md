@@ -13,7 +13,7 @@ Se ejecutará un exploit desarrollado por Nick Frichette el cual aprovecha una v
 
 1. Ir al directorio Parte4
 ````
-cd ~/contenedoresyseguridad/Seccion4DockerEscape
+cd ~/contenedoresyseguridad/Seccion1DockerEscape
 ````
 2. Backup el archivo runc
 ````
@@ -47,9 +47,9 @@ Ya se encuentra todo preparado para escapar de un contenedor sobreescribiendo ru
 
 1. **En el Host**. Para simular a un atacante, se ejecutará una shell y se mapeará el exploit compilado en un contenedor de base ubuntu en la carpeta tmp. 
 ````
-sudo chmod 777 /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main
+sudo chmod 777 /home/administrator/contenedoresyseguridad/Seccion1DockerEscape/main
 
-docker run --name contcomprometido -v /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main:/tmp/main -it ubuntu /bin/bash
+docker run --name contcomprometido -v /home/administrator/contenedoresyseguridad/Seccion1DockerEscape/main:/tmp/main -it ubuntu /bin/bash
 ````
 2. **En la shell del contenedor comprometido** recién creado, se debe cambiar de directorio a tmp y ejecutar el exploit.
 ````
