@@ -59,6 +59,6 @@ Véase UDICA: https://github.com/containers/udica
 En nuestro caso para solventar este error, se mapeará directamente el directorio /dev/mqueue para que las etiquetas selinux se apliquen correctamente:
 
 ````
-docker run --name contcomprometido -v /home/administrator/contenedoresyseguridad/Seccion4DockerEscape/main:/tmp/main -v /dev/mqueue:/dev/mqueue -it ubuntu /bin/bash
+docker run --name contcomprometido -v /dev/mqueue:/dev/mqueue -it ubuntu /bin/bash
 ````
 
