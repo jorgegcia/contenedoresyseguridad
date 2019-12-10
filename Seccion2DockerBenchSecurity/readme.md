@@ -19,7 +19,7 @@ cd ~/benchmark/docker-bench-security
 sudo ./docker-bench-security
 ````
 
-S observa el resultado tomando nota de los puntos más relevantes y significativos. 
+Se observa el resultado tomando nota de los puntos más relevantes y significativos. 
 En este taller se intentará resolver los puntos más significativos.
 Si se desea saber más sobre todos y cada uno de los controles, es posible descargar la guía del CIS en el siguiente enlace: https://www.cisecurity.org/benchmark/docker/
 
