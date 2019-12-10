@@ -11,7 +11,15 @@ Se ejecutará un exploit desarrollado por Nick Frichette el cual aprovecha una v
 
 ## Requisitos
 
-1. Ir al directorio Parte4
+## Requisitos
+
+-Descargar la máquina virtual que servirá de host de docker e importar en virtualbox.
+-Descargar repositorio del laboratorio 
+````
+git clone https://github.com/SidertiaLabs/contenedoresyseguridad.git
+````
+
+1. Ir al directorio Parte1
 ````
 cd ~/contenedoresyseguridad/Seccion1DockerEscape
 ````
