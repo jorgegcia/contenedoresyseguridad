@@ -8,7 +8,8 @@ Tiempo estimado: **10 min**
 
 
 <div id='id1'></div>
-##1 CGroups
+
+## 1 CGroups
 
 Se puede limitar los recursos a nivel de daemon o a nivel de cada contenedor.
 Para un contenedor docker run tiene varios flags:
@@ -56,7 +57,8 @@ docker stats -a
 docker rm -f estresa1
 ````
 
-### Utilizar flags de límite
+## 2 Utilizar flags de límite
+
 Ejecutar de nuevo el contenedor con los flags comentados al inicio:
 ````
 docker run -d --name estresa1 --cpuset-cpus 0 --cpu-shares 512 --pids-limit 100 estresacpu 
