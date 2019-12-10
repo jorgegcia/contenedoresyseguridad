@@ -72,7 +72,7 @@ cat: shadow: Permission denied
 Parar dockerd con ctrl+c.
  arrancar dicho contenedor sin parametros:
 ````
-sudo dockerd
+sudo systemctl start docker
 ````
 
 Desde otra shell repetir proceso previo y listar el fichero shadow.
