@@ -4,7 +4,7 @@ Guía del laboratorio impartido por Sidertia en las jornadas CCN-STIC
 Tiempo estimado: **10 min**
 ## ÍNDICE 📋
 1. [CGroups ](#id1)
-    1. [ulimits](#id31)
+2. [Flags de limitación](#id31)
 
 
 <div id='id1'></div>
@@ -57,7 +57,7 @@ docker stats -a
 docker rm -f estresa1
 ````
 
-## 2 Utilizar flags de límite
+## 2 Flags de limitación
 
 Ejecutar de nuevo el contenedor con los flags comentados al inicio:
 ````
